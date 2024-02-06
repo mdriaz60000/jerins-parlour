@@ -8,6 +8,7 @@ const Banner = () => {
       <h1 className="text-5xl text-[#111430] font-bold">BEAUTY SALON</h1>
       <h1 className="text-5xl text-[#111430] font-bold">FOR EVERY WOMEN</h1>
       <p className="py-6 text-[#666666] w-[364px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat </p>
+      <button className="btn btn-sm text-[#ffffff] bg-[#F63E7B] ">Get an Appointment</button>
     </div>
     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
      <img src={young} alt="" />
