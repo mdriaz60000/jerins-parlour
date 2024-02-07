@@ -24,7 +24,7 @@ fetch('testimonials.json')
        {
             testimonials?.map(testimonial =><div key={testimonial.id}>
 
-         <div className=" pt-5 px-8 h-[360px] text-black  bg-[#ffffff] shadow-md">            
+         <div className=" pt-5 px-8 h-[360px] text-black  bg-[#ffffff] ">            
               <div className=' flex gap-5'>
               <div className="avatar">
          <div className="w-16 h-16 rounded-full">
@@ -42,8 +42,6 @@ fetch('testimonials.json')
       value={testimonial.rating}
       readOnly
     /></p>
-              
-
             </div> 
             </div>)
         }

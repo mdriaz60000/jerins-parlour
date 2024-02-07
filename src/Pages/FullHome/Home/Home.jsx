@@ -1,6 +1,7 @@
 import Banner from "../Banner/Banner";
 import OurService from "../OurService/OurService";
 import Profetional from "../Profetional/Profetional";
+import SendMessage from "../SendMessage/SendMessage";
 import TestyMonials from "../TestyMonials/TestyMonials";
 
 
@@ -11,6 +12,7 @@ const Home = () => {
           <OurService></OurService>
           <Profetional></Profetional>
           <TestyMonials></TestyMonials>
+          <SendMessage></SendMessage>
        
           
          
