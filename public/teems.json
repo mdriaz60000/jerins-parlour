@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "name": "John Doe",
+      "experience": "7",
+      "img": "https://img.freepik.com/free-photo/front-view-young-female-manicure-pink-t-shirt-black-cape-with-black-gloves-getting-prepared-her-job-blue_140725-24211.jpg?size=626&ext=jpg&uid=R110004738&ga=GA1.1.1584261188.1697473840&semt=ais"
+    },
+    {
+      "id": 2,
+      "name": "Mim Smith",
+      "experience": "3",
+      "img": "https://img.freepik.com/free-photo/female-artist-holding-paintbrushes_114579-26897.jpg?size=626&ext=jpg&uid=R110004738&ga=GA1.1.1584261188.1697473840&semt=ais"
+    },
+    {
+      "id": 3,
+      "name": "David Johnson",
+      "experience": "5",
+      "img": "https://img.freepik.com/premium-photo/beautiful-woman-applying-make-up_85869-6153.jpg?size=626&ext=jpg&uid=R110004738&ga=GA1.1.1584261188.1697473840&semt=ais"
+    },
+    {
+      "id": 4,
+      "name": "Emily Wilson",
+      "experience": "7r",
+      "img": "https://img.freepik.com/premium-photo/female-stylist-business-owner-hair-salon-using-digital-tablet-check-beauty-products_531091-124.jpg?size=626&ext=jpg&uid=R110004738&ga=GA1.1.1584261188.1697473840&semt=ais"
+    },
+    {
+      "id": 5,
+      "name": "Michael Brown",
+      "experience": "1",
+      "img": "https://img.freepik.com/premium-photo/young-woman-manicurist-posing-with-nail-samples_74648-787.jpg?size=626&ext=jpg&uid=R110004738&ga=GA1.1.1584261188.1697473840&semt=ais"
+    },
+    {
+      "id": 6,
+      "name": "Sarah Taylor",
+      "experience": "3",
+      "img": "https://img.freepik.com/free-photo/female-visagiste-with-cosmetics_1398-746.jpg?size=626&ext=jpg&uid=R110004738&ga=GA1.1.1584261188.1697473840&semt=ais"
+    }
+  ]
+  

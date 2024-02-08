@@ -1,8 +1,11 @@
 import { NavLink } from 'react-router-dom';
 import logo  from "../../../assets/logo.png"
+import { useContext } from 'react';
+import { AuthContext } from '../Provider/AuthProvider';
  
 
 const NavBar = () => {
+  const { logOut,user} = useContext(AuthContext)
 
     return (
         <div className="navbar bg-[#E5E5E5] items-center">
@@ -14,7 +17,7 @@ const NavBar = () => {
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
               <li><NavLink to='/'>Home</NavLink></li>
               <li><NavLink to='/'>Our portfolio</NavLink></li>
-              <li><NavLink to='/'>Our teem</NavLink></li>
+              <li><NavLink to='/ourTeem'>Our teem</NavLink></li>
               <li><NavLink to='/'>Contact us</NavLink></li>
             
              
@@ -22,7 +25,7 @@ const NavBar = () => {
           </div>
           <NavLink className="btn btn-ghost text-2xl "> <img className='h-12 ' src={logo} alt="" /></NavLink>
         </div>
-        <div className="navbar-end hidden lg:flex">
+        <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
           <li><NavLink to='/'>Home</NavLink></li>
               <li><NavLink to='/portfolio'>Our portfolio</NavLink></li>
@@ -30,10 +33,31 @@ const NavBar = () => {
               <li><NavLink to='/contact'>Contact us</NavLink></li>
           </ul>
         </div>
-        <div className="">
-          <a className="btn">Button</a>
+       
+
+       <div className="navbar-end">
+        {user? <div className="avatar px-3">
+  <div className="w-14 h-14 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 ">
+    <img src={user.photoURL}/>
+  </div>
+</div> : ""}
+          {
+            user ?
+            <button onClick={ logOut}>logout</button>
+            : <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-red-700 " : "  text-amber-300"
+            }
+            to="/signIn"
+          >
+            login
+          </NavLink>
+          }
+        
         </div>
-      </div>
+      
+        </div>
+      
     );
 };
 
