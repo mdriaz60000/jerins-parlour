@@ -18,7 +18,7 @@ const NavBar = () => {
               <li><NavLink to='/'>Home</NavLink></li>
               <li><NavLink to='/'>Our portfolio</NavLink></li>
               <li><NavLink to='/ourTeem'>Our teem</NavLink></li>
-              <li><NavLink to='/'>Contact us</NavLink></li>
+              <li><NavLink to='/myService'>/My Service</NavLink></li>
             
              
             </ul>
@@ -27,10 +27,11 @@ const NavBar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-          <li><NavLink to='/'>Home</NavLink></li>
+              <li><NavLink to='/'>Home</NavLink></li>
               <li><NavLink to='/portfolio'>Our portfolio</NavLink></li>
               <li><NavLink to='/ourTeem'>Our teem</NavLink></li>
               <li><NavLink to='/contact'>Contact us</NavLink></li>
+              <li><NavLink to='/myService'>My Service</NavLink></li>
           </ul>
         </div>
        
@@ -43,14 +44,14 @@ const NavBar = () => {
 </div> : ""}
           {
             user ?
-            <button onClick={ logOut}>logout</button>
+            <button onClick={ logOut}>SignOut</button>
             : <NavLink
             className={({ isActive }) =>
               isActive ? "text-red-700 " : "  text-amber-300"
             }
             to="/signIn"
           >
-            login
+            SignIn
           </NavLink>
           }
         
