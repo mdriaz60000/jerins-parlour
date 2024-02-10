@@ -28,7 +28,7 @@ const Book = () => {
             </div> 
             <section>
                 <p className="font-bold py-2">Pay With </p>
-             <div className=" flex gap-2">
+             <div className=" flex  gap-2">
              <h2> <input className=" w-6 h-6" {...register("Developer", { required: true })} type="radio" value="Yes" /></h2>
             <h2>Credit Cart</h2>
             

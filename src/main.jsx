@@ -20,6 +20,11 @@ import PrivetRoute from './Pages/Shared/PrivetRoute/PrivetRoute';
 import Book from './Pages/MyService/Book/Book';
 import BookingList from './Pages/MyService/BookingList/BookingList';
 import Review from './Pages/MyService/Review/Review';
+import Admin from './Pages/Admin/Admin';
+import OrderList from './Pages/Admin/OrderList/OrderList';
+import AddService from './Pages/Admin/AddService/AddService';
+import MakeAdmin from './Pages/Admin/MakeAdmin/MakeAdmin';
+import ManageService from './Pages/Admin/ManageService/ManageService';
 
 const router = createBrowserRouter([
   {
@@ -65,6 +70,30 @@ const router = createBrowserRouter([
      
     ]
     
+  },
+  {
+    path: "/admin",
+    element:<Admin></Admin>,
+    children:[
+      
+        {
+          path: "/admin",
+          element: <OrderList></OrderList>,
+        },
+        {
+          path: "/admin/addService",
+          element: <AddService></AddService>,
+        },
+        {
+          path: "/admin/makeAdmin",
+          element: <MakeAdmin></MakeAdmin>,
+        },
+        {
+          path: "/admin/manageService",
+          element: <ManageService></ManageService>,
+        },
+      
+    ]
   }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
