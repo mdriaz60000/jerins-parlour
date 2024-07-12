@@ -7,7 +7,9 @@ const Admin = () => {
         <div className="flex text-[#111430] ">
         <section className="w-64 min-h-screen  bg-[#E5E5E5]">
           <div className="w-36 p-4 ">
-            <img className="" src={logo} alt="" />
+           <NavLink to='/' >
+           <img className="" src={logo} alt="" />
+           </NavLink>
           </div>
          <ul className="menu p-4">
          <li><NavLink to='/admin'>Order List</NavLink></li>

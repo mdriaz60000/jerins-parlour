@@ -3,7 +3,7 @@ import young from "../../../assets/images/beautiful-young-asian-woman-touching-h
 const Banner = () => {
     return (
         <div className="hero min-h-screen bg-[#E5E5E5]">
-  <div className="hero-content flex-col lg:flex-row gap-44">
+  <div className="hero-content flex-col lg:flex-row md:gap-44">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl text-[#111430] font-bold">BEAUTY SALON</h1>
       <h1 className="text-5xl text-[#111430] font-bold">FOR EVERY WOMEN</h1>

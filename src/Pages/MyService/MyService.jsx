@@ -6,8 +6,16 @@ const MyService = () => {
         <div className="flex text-[#111430] ">
           <section className="w-64 min-h-screen  bg-[#E5E5E5]">
             
-           <ul className="menu p-4">
-           <li><NavLink to='/myService'>book</NavLink></li>
+           <ul className=" menu p-4">
+           {/* <li>     <NavLink
+            // className={({ isActive }) =>
+            //   isActive ? "menu p-4 text-red-400  " : "bg-red text-[#111430] "
+            // }
+            to="/myService/book"
+          >
+           book
+          </NavLink></li> */}
+           <li><NavLink to='/myService/book'>book</NavLink></li>
            <li><NavLink to='/myService/bookingList'>booking list</NavLink></li>
            <li><NavLink to='/myService/review'>Review</NavLink></li>
              

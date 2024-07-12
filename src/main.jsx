@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { ToastContainer} from 'react-toastify';
 
 import './index.css'
 import {
@@ -17,7 +18,7 @@ import OurTeem from './Pages/OurTeem/OurTeem';
 import PrivetRoute from './Pages/Shared/PrivetRoute/PrivetRoute';
 
  import MyService from './Pages/MyService/MyService';
-import Book from './Pages/MyService/Book/Book';
+ import Book from './Pages/MyService/Book/Book';
 import BookingList from './Pages/MyService/BookingList/BookingList';
 import Review from './Pages/MyService/Review/Review';
 import Admin from './Pages/Admin/Admin';
@@ -54,12 +55,13 @@ const router = createBrowserRouter([
         element: <MyService></MyService>,
         children:[
           {
-            path: "/myService",
+            path: "/myService/book",
             element: <Book></Book>,
           },
           {
             path: "/myService/bookingList",
             element: <BookingList></BookingList>,
+            loader :  () => fetch('http://localhost:3000/customer')
           },
           {
             path: "/myService/review",
@@ -101,6 +103,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <div className=' max-w-6xl mx-auto'>
       <AuthProvider>
       <RouterProvider router={router} />
+      <ToastContainer />
       </AuthProvider>
     </div>
   </React.StrictMode>,

@@ -1,18 +1,41 @@
 
+import { useLoaderData } from "react-router-dom";
 
 const BookingList = () => {
- 
+
+  const bookings = useLoaderData()
+  
     return (
         <div>
-                  <div className="card px-8 h-[360px] text-black  bg-[#ffffff] shadow-md">
-              <div className="card-body">
-                <img className=" h-28 w-28 mx-auto" src='uui.img' alt="" />
-                <h2 className="card-title text-[#111430]">name</h2>
-            
-               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat itaque quae optio at et similique.</p>
-    
-            </div>
-            </div> 
+         <div className="  overflow-x-auto">
+  <table className="table table-zebra">
+    {/* head */}
+    <thead className=" text-red-600">
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Service</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    {
+     bookings.map((booking, index) => (
+    <tr key={index}>
+      <th>{index + 1}</th>
+      <td>{booking.name}</td>
+      <td>{booking.email}</td>
+      <td>{booking.selectValue}</td>
+    </tr>
+  ))
+}
+  
+     
+
+    </tbody>
+  </table>
+</div>
         </div>
     );
 };
