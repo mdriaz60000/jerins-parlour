@@ -4,33 +4,17 @@ import { useForm } from "react-hook-form";
 // import Swal from "sweetalert2";
 
 const Book = () => {
-  const [selectValue, setSelectValue] = useState("hair");
+  const [selectValue, setSelectValue] = useState();
   const [price, setPrice] = useState(0);
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit ,reset} = useForm();
 
   const onSubmit = async (data) => {
     const info = {
         ...data,selectValue
-    }
-    console.log(info);
+    }  
 
-    // axios.post('http://localhost:3000/product', info)
-    // .then(data=>console.log(data.data))
-    // if(data){
-    //   Swal.fire({
-    //     title: "success?",
-    //     text: "That added successfully",
-    //     icon: "success"
-    //   });
-    // }
-    console.log(info);
-    
-     
-     
-      
-if  (info) {
-  fetch("http://localhost:3000/customer/",  {
+  fetch('https://jerins-parlour-sarver.vercel.app/customer',  {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -42,9 +26,10 @@ if  (info) {
       console.log(newdata);
       // toast('successfully order')
       alert("You clicked the button!");
+    reset()
     });
     
-}
+    
 
   };
 

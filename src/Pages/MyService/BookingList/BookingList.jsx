@@ -2,13 +2,12 @@
 import { useLoaderData } from "react-router-dom";
 
 const BookingList = () => {
-
   const bookings = useLoaderData()
-  
+
     return (
         <div>
          <div className="  overflow-x-auto">
-  <table className="table table-zebra">
+  <table className="table ">
     {/* head */}
     <thead className=" text-red-600">
       <tr>
@@ -21,7 +20,7 @@ const BookingList = () => {
     <tbody>
       
     {
-     bookings.map((booking, index) => (
+     bookings ?.map((booking, index) => (
     <tr key={index}>
       <th>{index + 1}</th>
       <td>{booking.name}</td>
@@ -30,9 +29,6 @@ const BookingList = () => {
     </tr>
   ))
 }
-  
-     
-
     </tbody>
   </table>
 </div>

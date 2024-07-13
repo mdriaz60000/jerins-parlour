@@ -61,7 +61,7 @@ const router = createBrowserRouter([
           {
             path: "/myService/bookingList",
             element: <BookingList></BookingList>,
-            loader :  () => fetch('http://localhost:3000/customer')
+            loader :  () => fetch('https://jerins-parlour-sarver.vercel.app/customer')
           },
           {
             path: "/myService/review",
